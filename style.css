@@ -277,7 +277,9 @@ footer{
       padding:10%;
   }
 }
-
+footer .foot{
+  text-align:center;
+}
 footer .foot .fbutton{
   margin-right: 2%; 
   border: none;
