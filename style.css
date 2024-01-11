@@ -185,6 +185,7 @@ button:hover{
   .main{
       margin-left:7%;
       margin-right:7%;
+      font-size:xx-small;
   }
 }
 @media only screen and (max-width: 320px){
@@ -213,6 +214,7 @@ button:hover{
   .mmain{
       margin-left:7%;
       margin-right:7%;
+      font-size:xx-small;
   }
 }
 @media only screen and (max-width: 320px){
@@ -242,6 +244,7 @@ button:hover{
   .fmain{
       margin-left:7%;
       margin-right:7%;
+      font-size:xx-small;
   }
 }
 @media only screen and (max-width: 320px){
