@@ -34,7 +34,7 @@
           height:10px;
         }
                                       /*conatiner of menu*/
-        .container {
+        .container1 {
           display: flex;
           position: relative;
           justify-content: center;
@@ -96,7 +96,8 @@
           top:0;
           z-index:1000;
           backdrop-filter: blur(20px);
-          overflow: hidden;
+          overflow: hidden; 
+          box-shadow: 1px 0px 0px 0px #10094b00 ;
         }
         .nav nav{
           width:80%;
@@ -201,6 +202,13 @@
         
         }
         @media only  screen and (max-width: 475px){
+          .container{
+            padding-top:15%;
+            padding-bottom:15%;
+          }
+          .content{
+            text-align:justify-content;
+          }
           .name{
               font-size: 13px;
               justify-content: center;
@@ -216,18 +224,35 @@
               width: 15px;
               height: 15px;
           }
+          .dropnav{
+              flex-direction:column;
+              gap:100px;
+              width:100%;
+              backdrop-filter: blur(20px);
+              algin-items:center;
+              justify-content:center;
+              
+          }
+          .dropnav a{
+              algin-items:center;
+              justify-content:center;
+          }
           .dropdown{
               font-size:13px;
-              top:27px;
           }
           .intro{
-              margin-top: 45px;
+              margin-top: 55px;
           }
           .nav{
-              height: 40px;
+              height: 55px;
           }
         }
-
+        @media only  screen and (max-width: 298px){
+            .name{
+              font-size: 8px;
+              justify-content: center;
+          }
+        }
                                         /* S C R O L L I N G */
         .scroller{
           max-width:1000px;
@@ -346,7 +371,7 @@
   </head>
   <body>
     <section class="nav">
-      <div class="container">
+      <div class="container1">
         <div class="menu" onclick="myFunction(this)" id="menu">
           <div class="bar">
             <div class="bar1" id="bar1"></div>
@@ -372,10 +397,10 @@
     </section>
     <section class="dropdown" id="dropdown">
       <nav class="dropnav" id="dropnav">
-        <a href="#">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#" id="bt">Home</a>
+        <a href="#skills" id="bt">Skills</a>
+        <a href="#about" id="bt">About</a>
+        <a href="#contact" id="bt">Contact</a>
       </nav>
     </section>
     <section class="intro">
@@ -411,8 +436,37 @@
             </div>
           </div>
         </div>
-   
     </section>
+     <section class="Education" id="edu">
+      <div class="container">
+          <div class="l">Education</div>
+          <div class="mar">
+              <p class="content"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I hold a B.Tech in Computer Science, wielding a proficiency in diverse programming languages
+                  and methodologies. My academic voyage has been enriched by a project centered on the creation of a Civil Plan Generator, showcasing my
+                    prowess in algorithmic design and software architecture.<br>Currently, my endeavors extend into the realm of cutting-edge 
+                    technology, where I am immersed in the development of a project focused on Deep Fake Detection using AI. 
+                    This venture epitomizes my dedication to harnessing artificial intelligence for ethical and security-driven applications.
+                    As a dynamic and forward-thinking engineer, I am driven to contribute innovative solutions to the ever-evolving landscape
+                    of computer science.
+              </p>
+          </div>
+      </div>
+    </section> 
+     <section class="Experience" id="exp">
+      <div class="container">
+          <div class="l">Experinece</div>
+          <div class="mar">
+              <p class="content"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I hold a B.Tech in Computer Science, wielding a proficiency in diverse programming languages
+                  and methodologies. My academic voyage has been enriched by a project centered on the creation of a Civil Plan Generator, showcasing my
+                    prowess in algorithmic design and software architecture.<br>Currently, my endeavors extend into the realm of cutting-edge 
+                    technology, where I am immersed in the development of a project focused on Deep Fake Detection using AI. 
+                    This venture epitomizes my dedication to harnessing artificial intelligence for ethical and security-driven applications.
+                    As a dynamic and forward-thinking engineer, I am driven to contribute innovative solutions to the ever-evolving landscape
+                    of computer science.
+              </p>
+          </div>
+      </div>
+    </section> 
     <section class="About" id="about">
       <div class="container">
           <div class="l">About Me</div>
@@ -443,10 +497,16 @@
                 document.getElementById('dropdown').style.display='flex';
                 document.getElementById('dropdown').style.justifyContent='center';
                 document.getElementById('dropdown').style.position='fixed';
-                document.getElementById('dropdown').style.top='25px';
+                document.getElementById('dropdown').style.top='40px';
+                document.getElementById('dropdown').style.height='100%';
                 document.getElementById('dropdown').style.width='100%';
                 document.getElementById('dropdown').style.zIndex='1000';
                 document.getElementById('dropdown').style.backdropFilter='10px';
+                
+                document.getElementById('bt').addEventListener('click',function(){
+                  document.getElementById('dropdown').style.display='none';
+                  
+                });
             } 
             else{
                 document.getElementById('dropdown').style.display='none';
